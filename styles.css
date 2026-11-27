@@ -153,15 +153,15 @@ h1, h2, h3 { font-family: "Space Grotesk", sans-serif; }
 .portrait-glow { position: absolute; z-index: -1; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(23, 100, 215, .34), rgba(5, 147, 177, .12) 48%, transparent 72%); filter: blur(25px); }
 .portrait-ring { position: relative; width: min(390px, 72vw); aspect-ratio: 1; padding: 6px; border-radius: 50%; background: conic-gradient(from 25deg, #2563eb, #06b6d4 26%, rgba(68, 144, 255, .18) 49%, #06b6d4 75%, #2563eb); box-shadow: 0 0 35px rgba(37, 99, 235, .23), 0 0 95px rgba(6, 182, 212, .1); animation: ring-glow 4s ease-in-out infinite alternate; }
 .portrait-inner { width: 100%; height: 100%; overflow: hidden; border: 6px solid var(--bg); border-radius: 50%; background: #102242; }
-.portrait-inner img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 34%; transform: scale(1); }
+.portrait-inner img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 34%; transform: translateZ(0); backface-visibility: hidden; }
 .visual-orbit { position: absolute; width: 410px; height: 410px; border: 1px solid rgba(75, 139, 242, .1); border-radius: 50%; }
 .orbit-two { width: 465px; height: 465px; border-style: dashed; border-color: rgba(75, 195, 220, .1); animation: orbit-pulse 4.5s ease-in-out infinite alternate; }
 .orbit-one::before, .orbit-one::after { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 14px var(--cyan); content: ""; }
 .orbit-one::before { top: 17%; right: 13%; }
 .orbit-one::after { bottom: 12%; left: 17%; width: 4px; height: 4px; background: var(--blue); box-shadow: 0 0 14px var(--blue); }
 .floating-badge { position: absolute; z-index: 2; display: inline-flex; align-items: center; gap: 8px; padding: 10px 13px; border: 1px solid var(--line-strong); border-radius: 12px; background: color-mix(in srgb, var(--surface-solid) 83%, transparent); box-shadow: 0 12px 30px rgba(0, 0, 0, .18); color: var(--text-soft); font-size: 10px; font-weight: 600; backdrop-filter: blur(14px); animation: float 5s ease-in-out infinite; }
-.badge-python { top: 19%; left: -1%; }
-.badge-stack { top: 29%; right: -3%; animation-delay: -1.8s; }
+.badge-python { top: 19%; left: 0; }
+.badge-stack { top: 29%; right: 0; animation-delay: -1.8s; }
 .badge-build { right: 0; bottom: 19%; animation-delay: -3.2s; }
 .badge-symbol { display: grid; width: 20px; height: 20px; place-items: center; border-radius: 6px; background: rgba(74, 143, 251, .18); color: #80aeff; font-family: "Space Grotesk", sans-serif; font-size: 10px; font-weight: 700; }
 .badge-spark { color: #5bd7df; font-size: 17px; line-height: 1; }
