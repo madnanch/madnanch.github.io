@@ -64,7 +64,7 @@ if ("IntersectionObserver" in window) {
         else link.removeAttribute("aria-current");
       });
     });
-  }, { rootMargin: "-30% 0px -55% 0px", threshold: 0 });
+  }, { rootMargin: "-15% 0px -70% 0px", threshold: 0 });
 
   sections.forEach((section) => sectionObserver.observe(section));
 
